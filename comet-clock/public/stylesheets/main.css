@@ -21,14 +21,14 @@ p {
 
 #clock span {
     position: relative;
-    font-size: 64px;
+    font-size: 80px;
     display: inline-block;
     background: #222;
     margin-right: 3px;
     padding: 0 10px;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
-    border-radius: 6px;
+    border-radius: 60px;
     box-shadow: 1px 1px 2px rgba(0,0,0,.3);
     background-image: linear-gradient(bottom, rgb(23,21,21) 33%, rgb(46,45,44) 70%);
     background-image: -o-linear-gradient(bottom, rgb(23,21,21) 33%, rgb(46,45,44) 70%);
