@@ -35,4 +35,8 @@ object Application extends Controller {
     Ok.stream(clock &> Comet(callback = "parent.clockChanged"))
   }
   
+  def playProcess = Action {
+    Ok(views.html.playView())
+  }
+  
 }
