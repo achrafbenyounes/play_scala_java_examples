@@ -1,10 +1,10 @@
-@(name: String, repeat: Int, color: Option[String])
+@(empFullName:String, empAge: Int, email: String,repeat: Int, color: Option[String])
 
 @main("Here is the result:") {
 
     <ul style="color: @color.getOrElse("inherited")">
         @for(_ <- 1 to repeat) {
-            <li>Hello @name!</li>
+            <li>Hello @empFullName! it's time to start working in NeoLynk</li>
         }
     </ul>
 

@@ -1,21 +1,31 @@
-@(helloForm: Form[(String,Int,Option[String])])
+@(helloForm: Form[(String,Int,String, Int,Option[String])])
 
 @import helper._
 
-@main(title = "The 'helloworld' application") {
+@main(title = "Employees details") {
 
-    <h1>Configure your 'Hello world':</h1>
+    <h1>Welcome New Employee</h1>
 
     @form(action = routes.Application.sayHello, args = 'id -> "helloform") {
+    	
+        @inputText(
+            field = helloForm("empFullName"),
+            args = '_label -> "Employee full name", 'placeholder -> "Employee name"
+        )
 
         @inputText(
-            field = helloForm("name"),
-            args = '_label -> "What's your name?", 'placeholder -> "World"
+            field = helloForm("empAge"),
+            args = '_label -> "Employee age", 'placeholder -> 18
+        )
+        
+        @inputText(
+            field = helloForm("email"),
+            args = '_label -> "Please provide a valid email address", 'placeholder -> "@your email"
         )
 
         @inputText(
             field = helloForm("repeat"),
-            args = '_label -> "How many times?", 'size -> 3, 'placeholder -> 10
+            args = '_label -> "How many times you want to welcome you?", 'size -> 3, 'placeholder -> 10
         )
 
         @select(
